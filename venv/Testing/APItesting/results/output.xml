@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-07T04:49:35.793774" rpa="false" schemaversion="5">
+<suite id="s1" name="test PUT brand list" source="C:\Users\user\Desktop\SVVTproject\venv\testing\APItesting\tests\test_PUT_brand_list.robot">
+<test id="s1-t1" name="Verify PUT Request Not Allowed On Brands List API" line="9">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-05-07T04:49:35.906139" level="INFO">Creating Session using : alias=api, url=https://automationexercise.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>https://automationexercise.com</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-05-07T04:49:35.906139" elapsed="0.000000"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2025-05-07T04:49:38.214691" level="INFO">PUT Request : url=https://automationexercise.com/api/brandsList 
+ path_url=/api/brandsList 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-05-07T04:49:38.215742" level="INFO">PUT Response : url=https://automationexercise.com/api/brandsList 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 07 May 2025 11:49:45 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept,Cookie,Accept-Encoding', 'Referrer-Policy': 'same-origin', 'X-Frame-Options': 'DENY', 'X-Content-Type-Options': 'nosniff', 'Allow': 'PUT, OPTIONS, DELETE, POST, GET', 'X-Powered-By': 'Phusion Passenger(R) 6.0.23', 'Status': '200 OK', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UREdM1jq0Zl%2BEIm7m8D7QwUm7zgXCpArO2Z73%2BhdXluHw7ynq3tdXm1TvpcZhtWE4kASWRHyiwnAMM%2Bj6nXMNM9gQa1ppOPPbMFnBH8N%2B47FisfaHLpDD8y4oTKZVlssE8Ra6Fx4P3aP"}]}', 'Server': 'cloudflare', 'Cf-Cache-Status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'CF-RAY': '93c07eee6acfee88-MXP', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"responseCode": 405, "message": "This request method is not supported."} 
+ </msg>
+<msg time="2025-05-07T04:49:38.215742" level="INFO">C:\Python311\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'automationexercise.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-05-07T04:49:38.215742" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>/api/brandsList</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-05-07T04:49:35.907159" elapsed="2.308583"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2025-05-07T04:49:38.219919" level="FAIL">Url: https://automationexercise.com/api/brandsList Expected status: 200 != 405</msg>
+<arg>405</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="FAIL" start="2025-05-07T04:49:38.215742" elapsed="0.007086">Url: https://automationexercise.com/api/brandsList Expected status: 200 != 405</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${response.text}</arg>
+<arg>This request method is not supported.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-05-07T04:49:38.224546" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-07T04:49:35.904121" elapsed="2.320425">Url: https://automationexercise.com/api/brandsList Expected status: 200 != 405</status>
+</test>
+<status status="FAIL" start="2025-05-07T04:49:35.793774" elapsed="2.435306"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="test PUT brand list" id="s1" pass="0" fail="1" skip="0">test PUT brand list</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

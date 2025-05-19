@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-07T02:12:41.215003" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Contact Form" source="C:\Users\user\Desktop\SVVTproject\venv\testing\tests\contact\test_contact_form.robot">
+<test id="s1-t1" name="Test Case 12: Contact Us Form" line="5">
+<kw name="Open Browser and Navigate to URL" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T02:12:41.494559" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<msg time="2025-05-07T02:12:41.745972" level="WARN">The chromedriver version (135.0.7049.114) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.92); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-07T02:16:29.182838" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-07T02:16:29.182838" level="FAIL">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=58955): Read timed out. (read timeout=120)</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-07T02:12:41.494559" elapsed="227.706973">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=58955): Read timed out. (read timeout=120)</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-05-07T02:16:29.202738" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-05-07T02:16:29.202738" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-07T02:12:41.494559" elapsed="227.708179">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=58955): Read timed out. (read timeout=120)</status>
+</kw>
+<kw name="Click Contact Us Button">
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Get In Touch Visible">
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Contact Form">
+<arg>${CONTACT_NAME}</arg>
+<arg>${CONTACT_EMAIL}</arg>
+<arg>${SUBJECT}</arg>
+<arg>${MESSAGE}</arg>
+<arg>${FILE_PATH}</arg>
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<kw name="Submit Contact Form">
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Success Message">
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Success Alert">
+<status status="NOT RUN" start="2025-05-07T02:16:29.204416" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-07T02:12:41.492400" elapsed="227.712016">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=58955): Read timed out. (read timeout=120)</status>
+</test>
+<status status="FAIL" start="2025-05-07T02:12:41.217587" elapsed="227.994343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Contact Form" id="s1" pass="0" fail="1" skip="0">Test Contact Form</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-07T02:12:41.238900" level="WARN">Error in file 'C:\Users\user\Desktop\SVVTproject\venv\testing\resources\keywords.robot' on line 46: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-05-07T02:12:41.745972" level="WARN">The chromedriver version (135.0.7049.114) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.92); currently, chromedriver 136.0.7103.92 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
